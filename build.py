@@ -532,7 +532,7 @@ class FontConfig:
 
     def _update_family_names(self):
         """Update family names based on options."""
-        name_arr = [word.capitalize() for word in self.family_name.split(" ")]
+        name_arr = [word for word in self.family_name.split(" ")]
         if self.use_normal_preset:
             name_arr.append("Normal")
         if not self.enable_ligature:
